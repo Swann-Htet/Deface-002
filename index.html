@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Justice for Myanmar Workers</h1>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t39.30808-6/284471386_5343886432333865_8792808606550036766_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=730e14&_nc_ohc=imJo3Byk4PgAX8BPR_G&_nc_ht=scontent-sin6-2.xx&oh=00_AT_72fXt6P0CT1Q6s_D-4K6m9laezI7g1qidPa1c9dtJQg&oe=62A38994">
+                <div class="text">1 / 5</div>
+              </div>
+
+            <div class="mySlides fade">
+              <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t39.30808-6/284791162_5343886652333843_4576227697036285016_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=730e14&_nc_ohc=NWCrJQZjg5sAX_5nSnP&tn=01pKXTPaMcOMDE_F&_nc_ht=scontent-sin6-2.xx&oh=00_AT_10g-bX-H-324GHo7jPP79hTGOFB9c_4BmWJ_jz1PIPg&oe=62A3BB88">
+              <div class="text">2 / 5</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t39.30808-6/285482571_5343887205667121_5062781875744215554_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=730e14&_nc_ohc=8qNPCby999MAX-iUa0m&_nc_ht=scontent-sin6-2.xx&oh=00_AT9Ix-CNbg6KkCePCWlfbunV9ylvWyM6Qp0fM4nDV5lzNA&oe=62A3B0B8">
+              <div class="text">3 / 5</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="https://scontent-sin6-3.xx.fbcdn.net/v/t39.30808-6/284483167_1797566007260610_4766949935175840362_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-mWE2d5wQxMAX_95Bfo&tn=01pKXTPaMcOMDE_F&_nc_ht=scontent-sin6-3.xx&oh=00_AT-7JwLXqVDXR6DhoBepgz-tuSeG1aTp_hTR9KrBi4dAmA&oe=62A3026B">
+              <div class="text">4 / 5</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t39.30808-6/285650433_5344283675627474_3389210775283841707_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=730e14&_nc_ohc=DQdo3dK6ioYAX93iuvo&_nc_ht=scontent-sin6-1.xx&oh=00_AT8oYys_WflM0LjjeETFBb10p9LrCds5-b3-mjE4868rCA&oe=62A3A93F">
+                <div class="text">5 / 5</div>
+            </div>
+            
+        </div>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+    </div>
+    
+    <canvas></canvas>
+
+    <iframe style="position: absolute; display: none;" width="560" height="315" src="https://www.youtube.com/embed/amh9BN2ZzsQ?autoplay=1" allow="autoplay"></iframe>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+    
+    <script src="JS/script.js"></script>
+
+</body>
+</html>
